@@ -42,7 +42,7 @@ trait HasTimezone
 
     protected function timezone(): Attribute
     {
-        return Attribute::make(
+        return new Attribute(
             set: function (?string $value) {
                 if ($value === null) {
                     return null;
